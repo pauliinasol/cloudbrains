@@ -1,8 +1,8 @@
 import "./App.css";
 import React from "react";
 import styled from "styled-components";
-import { HeadingOne } from "./typography";
-import { CloudBrainsMenu } from "./components/CloudBrainsHero";
+import { CloudBrainsMenu } from "./components/CloudBrainsMenu";
+import { CloudBrainsHeader } from "./components/CloudBrainsHeader";
 
 const Wrapper = styled.div`
   display: flex;
@@ -15,7 +15,8 @@ const Wrapper = styled.div`
 function App() {
   return (
     <Wrapper>
-      <HeadingOne>CloudBrains</HeadingOne>
+      <CloudBrainsHeader />
+
       <CloudBrainsMenu />
     </Wrapper>
   );
