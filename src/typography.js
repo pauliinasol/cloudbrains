@@ -2,6 +2,7 @@
 import styled from "styled-components";
 
 export const HeadingOne = styled.div`
+  color: #35426a;
   font-size: 3em;
 `;
 

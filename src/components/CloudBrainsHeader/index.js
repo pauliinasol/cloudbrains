@@ -2,10 +2,16 @@ import React from "react";
 import styled from "styled-components";
 import { HeadingOne } from "../../typography";
 import brains from "./brains.png";
+import logo from "./CloudBrains-Logo.png";
 
 export const Brains = styled.img.attrs({
   src: brains,
   alt: "CloudBrains",
+})``;
+
+export const Logo = styled.img.attrs({
+  src: logo,
+  alt: "CloudBrainsLogo",
 })``;
 
 const Wrapper = styled.div`
@@ -15,8 +21,8 @@ const Wrapper = styled.div`
 
 const Content = styled.div`
   padding: 4rem;
-  margin-top: 3rem;
-  margin-bottom: 3rem;
+  margin-top: 2rem;
+  margin-bottom: 2rem;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -28,7 +34,10 @@ export const CloudBrainsHeader = () => {
     <Wrapper>
       <Content>
         <Brains />
-        <HeadingOne>CloudBrains</HeadingOne>
+        <Logo />
+        <HeadingOne>
+          Having your head in the clouds isn’t a bad thing.
+        </HeadingOne>
       </Content>
     </Wrapper>
   );
