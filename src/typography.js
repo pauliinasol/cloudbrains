@@ -3,13 +3,14 @@ import styled from "styled-components";
 
 export const HeadingOne = styled.div`
   color: #35426a;
-  font-size: 3em;
+  padding: 2rem;
+  font-size: 2rem;
 `;
 
 export const HeadingTwo = styled.div`
-  font-size: 1.5em;
+  font-size: 1.5rem;
 `;
 
 export const Paragraph = styled.div`
-  font-size: 1em;
+  font-size: 1rem;
 `;

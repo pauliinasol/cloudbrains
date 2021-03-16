@@ -1,13 +1,26 @@
 import React from "react";
-import styled from "styled-components";
+import styled, { css } from "styled-components";
 import { HeadingOne } from "../../typography";
+import { Animation } from "./test";
 import brains from "./brains.png";
-import logo from "./CloudBrains-Logo.png";
+import cloud from "./cloud.png";
+import logo from "./CloudBrains-Logo.svg";
+import { useSpring, animated } from "react-spring";
 
 export const Brains = styled.img.attrs({
   src: brains,
   alt: "CloudBrains",
 })``;
+
+export const Cloud = styled.img.attrs({
+  src: cloud,
+  alt: "Cloud",
+})`
+  position: absolute;
+  /* top: 0;
+  left: 2rem; */
+  opacity: 0.8;
+`;
 
 export const Logo = styled.img.attrs({
   src: logo,
@@ -20,19 +33,35 @@ const Wrapper = styled.div`
 `;
 
 const Content = styled.div`
-  padding: 4rem;
-  margin-top: 2rem;
-  margin-bottom: 2rem;
+  padding: 3rem;
+  margin-top: 1rem;
+  margin-bottom: 1rem;
   display: flex;
   justify-content: center;
   align-items: center;
   flex-direction: column;
 `;
 
+const WrapperTwo = styled.div`
+  display: flex;
+  flex-direction: row;
+`;
+
 export const CloudBrainsHeader = () => {
+  // const props = useSpring({
+  //   config: { duration: 2500 },
+  //   from: { marginLeft: -800, opacity: 0 },
+  //   to: { marginLeft: 800, opacity: 1 },
+  // });
   return (
     <Wrapper>
       <Content>
+        {/* <animated.div style={props}>
+          <Cloud />
+        </animated.div> */}
+        <WrapperTwo>
+          <Animation />
+        </WrapperTwo>
         <Brains />
         <Logo />
         <HeadingOne>
